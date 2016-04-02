@@ -2,5 +2,9 @@ branches:
     only:
         - master
         
+# Not a .NET Project or Solution so prevent appveyor from complaining.  Were just utilizing it for automation.  Not
+# Building .net application
+build: off
+        
 install:
     - ps: 'Get-ChildItem'
