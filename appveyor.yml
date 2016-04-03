@@ -10,3 +10,5 @@ install:
     # Print O/S Information to build log
     - ps: 'Get-CimInstance win32_operatingsystem -Property Caption, OSArchitecture, Version | fl Caption, OSArchitecture, Version'
     - ps: $PSVersionTable
+    # Install latest version of the chefdk
+    - ps: iex (irm https://omnitruck.chef.io/install.ps1); Install-Project -Project chefdk -channel current
