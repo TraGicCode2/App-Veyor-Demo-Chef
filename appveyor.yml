@@ -16,3 +16,4 @@ install:
     - ps: $PSVersionTable
     # Install latest version of the chefdk
     - ps: iex (irm https://omnitruck.chef.io/install.ps1); Install-Project -Project chefdk -channel current
+    - ps: kitchen create
